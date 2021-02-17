@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: powderblue;
+  }
+  
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .titlenavbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .titlenavbar a {
+    text-decoration: none;
+  }
+  
+  .carousel {
+    display: flex;
+  }
+  
+  .carouselbtn {
+    position: absolute;
+  }
+  
+  /* Start of John */
+  .middleTiles {
+  }
+  
+  .itemTiles {
+    float: left;
+    width: 33%;
+    margin-top: 6px;
+  }
+  
+  footer {
+  }
+  
+  .footerRow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .footerContainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    display: flex;
+  }
+  
+  .footerLinks {
+  }
+  
+  .footerContact {
+    text-align: right;
+  }
