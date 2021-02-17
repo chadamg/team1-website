@@ -8,7 +8,7 @@
     <title>Team 1 Website</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 
 
 
@@ -21,17 +21,17 @@
   <body>
     <header>
       <div class="topbar">
-        <form action="index.html">
-          <button type="submit">Login</button>
+        <form action="index.html" class="topbarlogin">
+          <button type="submit"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Login</button>
         </form>
-        <form action="index.html">
+        <form action="index.html" class="topbarsearch">
           <input type="text" placeholder="Search..">
-          <button type="submit">Search</button>
+          <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
       </div>
       <div class="titlenavbar">
-        <a href="#">Title</a>
-        <nav>
+        <a href="#" class="title"><strong>App-ly</strong></a>
+        <nav class="navbar">
           <a href="#">Item type 1</a>
           <a href="#">Item type 2</a>
           <a href="#">Item type 3</a>

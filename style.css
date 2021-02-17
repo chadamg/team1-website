@@ -6,19 +6,56 @@ body {
   .topbar {
     display: flex;
     justify-content: space-between;
+    padding: 5px;
+  }
+
+  .topbarlogin:hover {
+    border-bottom: solid black;
+  }
+
+  .topbarlogin button {
+    background: transparent;
+    border: transparent;
+  }
+
+  .topbarlogin button:hover {
+    cursor: pointer;
+  }
+
+  .topbarsearch button {
+    background: transparent;
+    border: transparent;
+  }
+
+  .topbarsearch button:hover {
+    cursor: pointer;
+    border-bottom: solid black;
   }
   
   .titlenavbar {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
   }
   
-  .titlenavbar a {
+  .title {
     text-decoration: none;
+    color: black;
+    font-size: 30px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .navbar a:hover {
+    border-bottom: solid black;
   }
   
   .carousel {
     display: flex;
+    padding: 10px;
   }
   
   .carouselbtn {
