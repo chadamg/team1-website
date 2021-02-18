@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>App-ly</title>
-
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
   </head>
@@ -35,35 +38,33 @@
       </div>
     </header>
     <div class="carousel">
+      <div class="mySlides">
+        <div>
+          <img src="/images/placeholder.png" alt="Image" />
+          <button class="carouselbtn">Learn More</button>get
+        </div>
+      </div>
 
       <div class="mySlides">
         <div>
-          <img src="/images/placeholder.png" alt="Image">
+          <img src="/images/placeholder.png" alt="Image" />
           <button class="carouselbtn">Learn More</button>
         </div>
       </div>
 
       <div class="mySlides">
         <div>
-          <img src="/images/placeholder.png" alt="Image">
-          <button class="carouselbtn">Learn More</button>
-        </div>
-      </div>
-
-      <div class="mySlides">
-        <div>
-          <img src="/images/placeholder.png" alt="Image">
+          <img src="/images/placeholder.png" alt="Image" />
           <button class="carouselbtn">Learn More</button>
         </div>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
     </div>
-    <br>
+    <br />
 
-    <div style="text-align:center">
+    <div style="text-align: center">
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
@@ -148,13 +149,9 @@
             />
             <br />
             <label for="message"> Message </label>
-            <input
-              class="message"
-              type="text"
-              id="message"
-              name="user_message"
-              placeholder="Your message..."
-            />
+            <textarea rows="4" cols="70">
+            Your message...
+            </textarea>
             <br />
             <button type="submit">Submit</button>
           </form>
