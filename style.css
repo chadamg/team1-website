@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+}
+
 p,
 h1,
 h2,
@@ -13,10 +18,6 @@ h4 {
   margin-bottom: 20px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
 a :focus {
   color: black;
 }
@@ -28,7 +29,8 @@ a :focus {
   }
 }
 
-.topbarsearch button:hover, .topbarlogin button:hover {
+.dot, .prev,
+.next, .topbarsearch button:hover, .topbarlogin button:hover {
   cursor: pointer;
 }
 
@@ -46,7 +48,7 @@ a :focus {
   justify-content: space-between;
 }
 
-.navbar a, .title {
+.title, a {
   text-decoration: none;
   color: black;
 }
@@ -67,69 +69,10 @@ a :focus {
 
 .navbar a {
   margin-left: 15px;
-}
-
-/* Start of original CSS file */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f2f2f2;
 }
 
 .content {
   overflow: hidden;
-}
-
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
-}
-
-.topbarlogin:hover {
-  border-bottom: solid black;
-}
-
-.topbarlogin button {
-  background: transparent;
-  border: transparent;
-}
-
-.topbarlogin button:hover {
-  cursor: pointer;
-}
-
-.topbarsearch button {
-  background: transparent;
-  border: transparent;
-}
-
-.topbarsearch button:hover {
-  cursor: pointer;
-  border-bottom: solid black;
-}
-
-.titlenavbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #f2f2f2;
-  border-radius: 5px;
-}
-
-.title {
-  text-decoration: none;
-  color: black;
-  font-size: 30px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: black;
-  margin-left: 15px;
-}
-
-.navbar a:hover {
-  border-bottom: solid black;
 }
 
 .carousel {
@@ -163,7 +106,6 @@ body {
 
 .prev,
 .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
@@ -188,7 +130,6 @@ body {
 }
 
 .dot {
-  cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -203,13 +144,12 @@ body {
   background-color: #717171;
 }
 
-/*
-  .carousel img {
-    width: 100%;
-    height: 200px;
-    border-radius: 5px;
-  }
-  */
+.mySlides img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+}
+
 .carouselbtn {
   position: absolute;
   top: 70%;
