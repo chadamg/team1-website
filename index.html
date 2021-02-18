@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>App-ly</title>
-
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
   </head>
@@ -118,13 +121,9 @@
             />
             <br />
             <label for="message"> Message </label>
-            <input
-              class="message"
-              type="text"
-              id="message"
-              name="user_message"
-              placeholder="Your message..."
-            />
+            <textarea rows="4" cols="70">
+            Your message...
+            </textarea>
             <br />
             <button type="submit">Submit</button>
           </form>
