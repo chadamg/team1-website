@@ -37,52 +37,53 @@
         </nav>
       </div>
     </header>
-    <div class="carousel">
-      <div class="mySlides">
-        <div>
-          <img src="/images/placeholder.png" alt="Image" />
-          <button class="carouselbtn">Learn More</button>get
+    <main class="content">
+      <div class="carousel">
+        <div class="mySlides">
+          <div>
+            <img src="/images/placeholder.png" alt="Image" />
+            <button class="carouselbtn">Learn More</button>get
+          </div>
         </div>
+
+        <div class="mySlides">
+          <div>
+            <img src="/images/placeholder.png" alt="Image" />
+            <button class="carouselbtn">Learn More</button>
+          </div>
+        </div>
+
+        <div class="mySlides">
+          <div>
+            <img src="/images/placeholder.png" alt="Image" />
+            <button class="carouselbtn">Learn More</button>
+          </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
 
-      <div class="mySlides">
-        <div>
-          <img src="/images/placeholder.png" alt="Image" />
-          <button class="carouselbtn">Learn More</button>
-        </div>
+      <!--Start of John/Issy -->
+      <div>
+        <!--Paragraph-->
+        <h3>Most popular apps</h3>
+        <p>
+          Below you can find the most downloaded apps this week. Be sure not to
+          be left in the dark ages!
+        </p>
       </div>
 
-      <div class="mySlides">
-        <div>
-          <img src="/images/placeholder.png" alt="Image" />
-          <button class="carouselbtn">Learn More</button>
-        </div>
-      </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br />
-
-    <div style="text-align: center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-    <!--Start of John/Issy -->
-    <div>
-      <!--Paragraph-->
-      <h3>Most popular apps</h3>
-      <p>
-        Below you can find the most downloaded apps this week. Be sure not to be
-        left in the dark ages!
-      </p>
-    </div>
-
-    <div class="middleTiles">
-      <!--Three item tiles -->
-      <a href="#">
+      <div class="middleTiles">
+        <!--Three item tiles -->
+        <!-- <a href="#"> -->
         <div class="itemTiles">
           <!--This div should be one of the tiles for the items -->
 
@@ -95,63 +96,64 @@
           <p>Official Facebook app</p>
           <p>£3.99</p>
         </div>
-      </a>
-      <div class="itemTiles">
-        <!--This div should be one of the tiles for the items -->
-        <a href="#">
-          <img
-            class="icon"
-            src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
-            alt="Instagram Image"
-          />
-          <h4>Instagram</h4>
-          <p>Official Instagram app</p>
-          <p>£3.99</p>
-        </a>
+        <!-- </a> -->
+        <div class="itemTiles">
+          <!--This div should be one of the tiles for the items -->
+          <a href="#">
+            <img
+              class="icon"
+              src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+              alt="Instagram Image"
+            />
+            <h4>Instagram</h4>
+            <p>Official Instagram app</p>
+            <p>£3.99</p>
+          </a>
+        </div>
+        <div class="itemTiles">
+          <!--This div should be one of the tiles for the items -->
+          <a href="#">
+            <img
+              class="icon"
+              src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+              alt="TikTok Image"
+            />
+            <h4>TikTok</h4>
+            <p>Official TikTok app</p>
+            <p>£3.99</p>
+          </a>
+        </div>
       </div>
-      <div class="itemTiles">
-        <!--This div should be one of the tiles for the items -->
-        <a href="#">
-          <img
-            class="icon"
-            src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
-            alt="TikTok Image"
-          />
-          <h4>TikTok</h4>
-          <p>Official TikTok app</p>
-          <p>£3.99</p>
-        </a>
-      </div>
-    </div>
+    </main>
 
     <footer>
       <div class="footerContainer">
         <div class="footerLinks">
           <!--Left hand side of footer containing links-->
           <h4>External Links</h4>
-          <ul>
-            <a href="#"><li>About us</li></a>
-            <a href="#"><li>Customer support</li></a>
-            <a href="#"><li>Small print</li></a>
-          </ul>
+
+          <a href="#"><p>About us</p></a>
+          <a href="#"><p>Customer support</p></a>
+          <a href="#"><p>Terms and conditions</p></a>
         </div>
 
         <div class="footerContact">
           <!--Right hand side for contact form-->
           <h4>Contact form</h4>
           <form>
-            <label for="email"> Email </label>
-            <input
-              type="text"
-              id="email"
-              name="user_email"
-              placeholder="Your email..."
-            />
-            <br />
-            <label for="message"> Message </label>
-            <textarea rows="4" cols="70">
-            Your message...
-            </textarea>
+            <div class="email-container">
+              <label for="email"> Email </label>
+              <input
+                type="text"
+                id="email"
+                name="user_email"
+                placeholder="Your email..."
+              />
+            </div>
+            <div class="user-message">
+              <label for="message"> Message </label>
+              <textarea rows="8" placeholder="Your email..."></textarea>
+            </div>
             <br />
             <button type="submit">Submit</button>
           </form>

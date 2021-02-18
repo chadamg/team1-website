@@ -1,3 +1,33 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a :focus {
+  color: black;
+}
+
+@media only screen and (min-width: 900px) {
+  .footerContainer, .content, .titlenavbar, .topbar {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
 .topbarsearch button:hover, .topbarlogin button:hover {
   cursor: pointer;
 }
@@ -40,15 +70,13 @@
 }
 
 /* Start of original CSS file */
-@media only screen and (min-width: 900px) {
-  body {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-}
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: powderblue;
+}
+
+.content {
+  overflow: hidden;
 }
 
 .topbar {
@@ -178,44 +206,62 @@ body {
   margin-top: 6px;
 }
 
-.footerContainer {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
-  display: flex;
+footer {
+  background-color: #5a5a5a;
 }
-.footerContainer ::after {
-  content: "";
-  display: table;
-  clear: both;
+
+.footerContainer {
+  display: flex;
+  color: white;
+}
+.footerContainer a {
+  color: white;
 }
 
 .footerContact {
   text-align: right;
   margin-left: auto;
+  width: 50%;
 }
-.footerContact form > * {
+.footerContact form * {
   margin-bottom: 5px;
 }
 .footerContact form input {
-  width: 800px;
+  width: 100%;
+  padding: 0 5px;
+}
+.footerContact form textarea {
+  width: 100%;
+  padding: 0 5px;
+}
+.footerContact form button {
+  margin-bottom: 30px;
+  padding: 5px;
 }
 
-.footerContact form > * {
-  margin-bottom: 5px;
+.email-container {
+  display: flex;
+}
+.email-container label {
+  margin-right: 10px;
+  width: 80px;
 }
 
-.footerContact form input {
-  width: 400px;
+label,
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.user-message {
+  display: flex;
+}
+.user-message label {
+  margin-right: 10px;
+  width: 80px;
 }
 
 .itemTiles img {
   width: 95%;
-}
-
-* {
-  text-decoration: none;
-  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
