@@ -177,7 +177,7 @@ body {
   margin-top: 6px;
 }
 
-.footerRow:after {
+.footerContainer:after {
   content: "";
   display: table;
   clear: both;
@@ -192,6 +192,19 @@ body {
 
 .footerContact {
   text-align: right;
+  margin-left: auto;
+}
+
+.footerContact form > * {
+  margin-bottom: 5px;
+}
+
+.footerContact form input {
+  width: 800px;
+}
+
+.itemTiles img {
+  width: 95%;
 }
 
 /*# sourceMappingURL=style.css.map */
