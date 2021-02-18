@@ -140,56 +140,59 @@ body {
 }
 
 .carousel {
-    padding: 10px;
-    position: relative;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .mySlides {
-    display: none;
-  }
-  
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  
-  /*
+  padding: 10px;
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/*
   .carousel img {
     width: 100%;
     height: 200px;
@@ -204,9 +207,7 @@ body {
   padding: 5px;
 }
 
-/* Start of John */
-.middleTiles {
-}
+/* Start of John/Issy */
 
 .itemTiles {
   float: left;
@@ -214,28 +215,27 @@ body {
   margin-top: 6px;
 }
 
-footer {
-}
-
-.footerContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .footerContainer {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 10px;
   display: flex;
-}
-
-.footerLinks {
+  ::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .footerContact {
   text-align: right;
   margin-left: auto;
+  form > * {
+    margin-bottom: 5px;
+  }
+  form input {
+    width: 800px;
+  }
 }
 
 .footerContact form > * {
@@ -250,4 +250,10 @@ footer {
 
 .itemTiles img {
   width: 95%;
+}
+
+// General
+* {
+  text-decoration: none;
+  color: black;
 }
