@@ -215,32 +215,35 @@ body {
   margin-top: 6px;
 }
 
-.footerContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .footerContainer {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 10px;
   display: flex;
+  ::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .footerContact {
   text-align: right;
   margin-left: auto;
-}
-
-.footerContact form > * {
-  margin-bottom: 5px;
-}
-
-.footerContact form input {
-  width: 800px;
+  form > * {
+    margin-bottom: 5px;
+  }
+  form input {
+    width: 800px;
+  }
 }
 
 .itemTiles img {
   width: 95%;
+}
+
+// General
+* {
+  text-decoration: none;
+  color: black;
 }
