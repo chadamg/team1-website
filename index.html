@@ -11,6 +11,9 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <title>Geolocation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="text/javascript" src="index.js"></script>
   </head>
 
   <body>
@@ -42,42 +45,16 @@
         </nav>
       </div>
     </header>
+    
+    <!-- Google Web API to display current location on Map -->
+    <div id="map"></div>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+    async ></script>
+
+
     <!-- this main contains the image carousel and most popular apps(three item tiles) -->
     <main class="content">
-      <!-- image carousel/slides -->
-      <div class="carousel">
-        <!-- slide 1 -->
-        <div class="mySlides">
-          <div class="slidenumber">1 / 3</div>
-          <img src="/images/placeholder.png" alt="Image" />
-          <button class="carouselbtn">Learn More</button>
-          <div class="slidetext">Caption Text</div>
-        </div>
-        <!-- slide 2 -->
-        <div class="mySlides">
-          <div class="slidenumber">2 / 3</div>
-          <img src="/images/placeholder.png" alt="Image" />
-          <button class="carouselbtn">Learn More</button>
-          <div class="slidetext">Caption Text</div>
-        </div>
-        <!-- slide 3 -->
-        <div class="mySlides">
-          <div class="slidenumber">3 / 3</div>
-          <img src="/images/placeholder.png" alt="Image" />
-          <button class="carouselbtn">Learn More</button>
-          <div class="slidetext">Caption Text</div>
-        </div>
-        <!-- previous and next buttons for slides -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      <br />
-      <!-- three dots for slides -->
-      <div style="text-align: center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
 
       <!--Start of John/Issy -->
       <div>
