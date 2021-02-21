@@ -1,13 +1,50 @@
-// =============================== General ================================
 * {
   margin: 0;
   padding: 0px;
   box-sizing: border-box;
 }
 
+/* Google Web API to display current location on Map */
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 50%;
+      }
+      
+      /* Optional: Makes the sample page fill the window. */
+      html {
+        height: 100%;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 30px;
+        padding: 0;
+      }
+      
+      .custom-map-control-button {
+        appearance: button;
+        background-color: #fff;
+        border: 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        margin: 10px;
+        padding: 0 0.5em;
+        height: 40px;
+        font: 400 18px Roboto, Arial, sans-serif;
+        overflow: hidden;
+      }
+      .custom-map-control-button:hover {
+        background: #ebebeb;
+      }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #fbfbfb;
+  background-color: #f2f2f2;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 p,
@@ -23,89 +60,50 @@ button {
   padding: 2px;
 }
 
-a {
-  @extend %title-shared;
-  :focus {
-    color: black;
-  }
+a :focus {
+  color: black;
 }
 
-%container {
-  @media only screen and (min-width: 900px) {
+@media only screen and (min-width: 900px) {
+  .footerContainer, .content, .header {
     margin-left: 100px;
     margin-right: 100px;
   }
 }
 
-%pointer-shared {
+.dot, .prev,
+.next, .basket-box, .topbarsearch button:hover {
   cursor: pointer;
 }
 
-%underline {
+nav a :hover, .topbarsearch button:hover {
   border-bottom: 1px solid black;
 }
 
-// ============================== header ============================================
-
-%topbar-shared {
+.topbarsearch button {
   background: transparent;
   border: transparent;
 }
 
-%titlenav-shared {
+.header {
   display: flex;
   justify-content: space-between;
 }
 
-%title-shared {
+.title, a {
   text-decoration: none;
   color: black;
 }
 
-@mixin padding($property) {
-  padding: $property;
-}
-
-// .topbar {
-//   @extend %container;
-//   @extend %titlenav-shared;
-//   @include padding(5px);
-// }
-
-// .topbarlogin:hover {
-//   @extend %underline;
-// }
-
-// .topbarlogin button {
-//   @extend %topbar-shared;
-//
-
-.topbarsearch button {
-  @extend %topbar-shared;
-}
-
-// .topbarlogin button:hover {
-//   @extend %pointer-shared;
-// }
-
-.topbarsearch button:hover {
-  @extend %pointer-shared;
-  @extend %underline;
-}
-
 header {
-  // background-color: #cecece;
-  border-bottom: 1px solid rgb(204, 204, 204);
+  border-bottom: 1px solid #cccccc;
 }
 
 .header {
-  @extend %container;
-  @extend %titlenav-shared;
   align-items: center;
 }
 
 .title {
-  @extend %title-shared;
   font-size: 30px;
 }
 
@@ -113,15 +111,11 @@ nav {
   display: flex;
   align-items: center;
   height: 50px;
-  a {
-    margin-left: 15px;
-    :hover {
-      @extend %underline;
-    }
-  }
+}
+nav a {
+  margin-left: 15px;
 }
 .basket-box {
-  @extend %pointer-shared;
   display: flex;
   margin-left: 15px;
   align-items: center;
@@ -129,12 +123,12 @@ nav {
   width: 55px;
   position: relative;
   justify-content: flex-end;
-  p {
-    margin: 0 2px 0 0;
-  }
-  ion-icon {
-    font-size: 30px;
-  }
+}
+.basket-box p {
+  margin: 0 2px 0 0;
+}
+.basket-box ion-icon {
+  font-size: 30px;
 }
 
 .dropdown {
@@ -157,13 +151,13 @@ nav {
   display: flex;
   border-bottom: 1px solid #717171;
   padding: 10px;
-  img {
-    max-width: 110px;
-    padding: 5px;
-  }
-  p {
-    padding: 5px;
-  }
+}
+.basket-item img {
+  max-width: 110px;
+  padding: 5px;
+}
+.basket-item p {
+  padding: 5px;
 }
 
 #checkout {
@@ -171,10 +165,7 @@ nav {
   width: 100%;
 }
 
-// ============================== Main ========================================
-
 .content {
-  @extend %container;
   overflow: hidden;
 }
 
@@ -209,7 +200,6 @@ nav {
 
 .prev,
 .next {
-  @extend %pointer-shared;
   position: absolute;
   top: 50%;
   width: auto;
@@ -234,7 +224,6 @@ nav {
 }
 
 .dot {
-  @extend %pointer-shared;
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -262,74 +251,141 @@ nav {
   padding: 5px;
 }
 
-//  =================================== Tiles ===================================
-
 .itemTiles {
   float: left;
   width: 33%;
   margin-top: 6px;
 }
 
-//  =================================== Footer ====================================
-
 footer {
-  background-color: rgb(90, 90, 90);
+  background-color: #5a5a5a;
   margin-top: 15px;
 }
 
 .footerContainer {
-  @extend %container;
   display: flex;
   color: white;
-  a {
-    color: white;
-  }
+}
+.footerContainer a {
+  color: white;
 }
 
 .footerContact {
   text-align: right;
   margin-left: auto;
   width: 50%;
-  form * {
-    margin-bottom: 5px;
-  }
-
-  form input {
-    width: 100%;
-    padding: 0 5px;
-  }
-
-  form textarea {
-    width: 100%;
-    padding: 0 5px;
-  }
-
-  form button {
-    margin-bottom: 30px;
-    padding: 5px;
-  }
+}
+.footerContact form * {
+  margin-bottom: 5px;
+}
+.footerContact form input {
+  width: 100%;
+  padding: 0 5px;
+}
+.footerContact form textarea {
+  width: 100%;
+  height: 35px;
+  padding: 0 5px;
+}
+.footerContact form button {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+.footerLinks {
+  width:48%;
 }
 
 .email-container {
   display: flex;
-  label {
-    margin-right: 10px;
-    width: 80px;
-  }
 }
+.email-container label {
+  margin-right: 10px;
+  width: 80px;
+}
+
 label,
 textarea {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.user-message {
+.location {
   display: flex;
-  label {
-    margin-right: 10px;
-    width: 80px;
-  }
+}
+.location label {
+  margin-right: 10px;
+  width: 80px;
+}
+.deviceType {
+  display: flex;
+
+}
+.deviceType label {
+  margin-right: 10px;
+  margin-left:-18px;
+  width:80px;
 }
 
 .itemTiles img {
   width: 95%;
 }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 1.25px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*# sourceMappingURL=style.css.map */
