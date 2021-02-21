@@ -11,34 +11,45 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </head>
 
   <body>
     <!-- this header contains the topbar(login and search) and the titlenavbar(title and nav bar) -->
     <header>
-      <!-- login icon and search bar -->
-      <div class="topbar">
-        <!-- login icon -->
-        <form action="index.html" class="topbarlogin">
+      <!-- <div class="topbar"> -->
+      <!-- login icon -->
+      <!-- <form action="index.html" class="topbarlogin">
           <button type="submit">
             <i class="fa fa-user-circle-o" aria-hidden="true"></i> Login
           </button>
-        </form>
-        <!-- search bar -->
+        </form> -->
+      <!-- </div> -->
+
+      <div class="header">
+        <a href="#" class="title"><strong>App-ly</strong></a>
+
         <form action="index.html" class="topbarsearch">
           <input type="text" placeholder="Search.." />
           <button type="submit">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </form>
-      </div>
-      <!-- title and nav bar -->
-      <div class="titlenavbar">
-        <a href="#" class="title"><strong>App-ly</strong></a>
+
         <nav class="navbar">
           <a href="#">Intro</a>
           <a href="#">Apps</a>
           <a href="#">Contact</a>
+          <div class="basket-box">
+            <p id="basketNum"></p>
+            <ion-icon name="basket"></ion-icon>
+            <div class="dropdown" id="dropdown">
+              <div id="dropdown-items"></div>
+              <div class="checkout-button">
+                <button id="checkout">Checkout</button>
+              </div>
+            </div>
+          </div>
         </nav>
       </div>
     </header>
@@ -103,6 +114,7 @@
           <h4>Facebook</h4>
           <p>Official Facebook app</p>
           <p>£3.99</p>
+          <button id="addFacebookToBasket">Add to basket</button>
         </div>
         <!-- </a> -->
         <div class="itemTiles">
@@ -116,6 +128,7 @@
             <h4>Instagram</h4>
             <p>Official Instagram app</p>
             <p>£3.99</p>
+            <button id="addInstagramToBasket">Add to basket</button>
           </a>
         </div>
         <div class="itemTiles">
@@ -129,11 +142,11 @@
             <h4>TikTok</h4>
             <p>Official TikTok app</p>
             <p>£3.99</p>
+            <button id="addTikTokToBasket">Add to basket</button>
           </a>
         </div>
       </div>
     </main>
-
     <footer>
       <div class="footerContainer">
         <div class="footerLinks">
@@ -160,7 +173,7 @@
             </div>
             <div class="user-message">
               <label for="message"> Message </label>
-              <textarea rows="8" placeholder="Your email..."></textarea>
+              <textarea rows="8" placeholder="Message..."></textarea>
             </div>
             <br />
             <button type="submit">Submit</button>
@@ -168,5 +181,6 @@
         </div>
       </div>
     </footer>
+    <script src="./basket.js"></script>
   </body>
 </html>
