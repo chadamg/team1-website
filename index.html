@@ -45,12 +45,6 @@
         </nav>
       </div>
     </header>
-    
-    <!-- Google Web API to display current location on Map -->
-    <div id="map"></div>
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
-    async ></script>
 
 
     <!-- this main contains the image carousel and most popular apps(three item tiles) -->
@@ -115,16 +109,21 @@
       <div class="footerContainer">
         <div class="footerLinks">
           <!--Left hand side of footer containing links-->
-          <h4>External Links</h4>
 
           <a href="#"><p>About us</p></a>
           <a href="#"><p>Customer support</p></a>
           <a href="#"><p>Terms and conditions</p></a>
-        </div>
+
+          <!-- Google Web API to display current location on Map -->
+          <div id="map"></div>
+          <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+          async ></script>
+          </div>
 
         <div class="footerContact">
           <!--Right hand side for contact form-->
-          <h4>Contact form</h4>
+          <h4 style = "text-align:center; font-weight:bold">Discover the most downloaded apps in your country...</h4>
           <form>
             <div class="email-container">
               <label for="email"> Email </label>
@@ -135,10 +134,28 @@
                 placeholder="Your email..."
               />
             </div>
-            <div class="user-message">
-              <label for="message"> Message </label>
-              <textarea rows="8" placeholder="Your email..."></textarea>
+            <div class="location">
+              <label for="location"> Current location </label>
+              <input
+                type="text"
+                id="location"
+                name="user_location"
+                placeholder="Pan to your location to autofill..."
+              />
             </div>
+            <div class="deviceType">
+            <label for="deviceType"> Device type </label>
+            <select id = "deviceTypeDropdown">
+              <option value = "1">Android</option>
+              <option value = "2">Apple </option>
+              <option value = "3">Desktop</option>
+            </select>
+            </div>
+            <p style="float:left; margin-top:3px; margin-left:100px;">Turn on email updates:</p>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
             <br />
             <button type="submit">Submit</button>
           </form>
