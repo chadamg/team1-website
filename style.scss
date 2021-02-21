@@ -1,4 +1,4 @@
-// General
+// =============================== General ================================
 * {
   margin: 0;
   padding: 0px;
@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fbfbfb;
 }
 
 p,
@@ -17,6 +17,10 @@ h3,
 h4 {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+button {
+  padding: 2px;
 }
 
 a {
@@ -38,8 +42,10 @@ a {
 }
 
 %underline {
-  border-bottom: solid black;
+  border-bottom: 1px solid black;
 }
+
+// ============================== header ============================================
 
 %topbar-shared {
   background: transparent;
@@ -60,39 +66,42 @@ a {
   padding: $property;
 }
 
-.topbar {
-  @extend %container;
-  @extend %titlenav-shared;
-  @include padding(5px);
-}
+// .topbar {
+//   @extend %container;
+//   @extend %titlenav-shared;
+//   @include padding(5px);
+// }
 
-.topbarlogin:hover {
-  @extend %underline;
-}
+// .topbarlogin:hover {
+//   @extend %underline;
+// }
 
-.topbarlogin button {
-  @extend %topbar-shared;
-}
+// .topbarlogin button {
+//   @extend %topbar-shared;
+//
 
 .topbarsearch button {
   @extend %topbar-shared;
 }
 
-.topbarlogin button:hover {
-  @extend %pointer-shared;
-}
+// .topbarlogin button:hover {
+//   @extend %pointer-shared;
+// }
 
 .topbarsearch button:hover {
   @extend %pointer-shared;
   @extend %underline;
 }
 
-.titlenavbar {
+header {
+  // background-color: #cecece;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.header {
   @extend %container;
   @extend %titlenav-shared;
-  @include padding(10px);
-  background-color: #f2f2f2;
-  border-radius: 5px;
+  align-items: center;
 }
 
 .title {
@@ -100,19 +109,72 @@ a {
   font-size: 30px;
 }
 
-.navbar a {
+nav {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  a {
+    margin-left: 15px;
+    :hover {
+      @extend %underline;
+    }
+  }
+}
+.basket-box {
+  @extend %pointer-shared;
+  display: flex;
   margin-left: 15px;
+  align-items: center;
+  height: 50px;
+  width: 55px;
+  position: relative;
+  justify-content: flex-end;
+  p {
+    margin: 0 2px 0 0;
+  }
+  ion-icon {
+    font-size: 30px;
+  }
 }
 
-.navbar a:hover {
-  @extend %underline;
+.dropdown {
+  position: absolute;
+  top: 50px;
+  padding: 20px;
+  box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 300px;
+  right: 0;
+  display: none;
+  background-color: #fbfbfb;
 }
+
+#dropdown-items .basket-item:last-child {
+  border-bottom: none;
+}
+
+.basket-item {
+  display: flex;
+  border-bottom: 1px solid #717171;
+  padding: 10px;
+  img {
+    max-width: 110px;
+    padding: 5px;
+  }
+  p {
+    padding: 5px;
+  }
+}
+
+#checkout {
+  padding: 5px;
+  width: 100%;
+}
+
+// ============================== Main ========================================
 
 .content {
   @extend %container;
-}
-
-.content {
   overflow: hidden;
 }
 
@@ -128,22 +190,22 @@ a {
 }
 
 .slidetext {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-  
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
 .slidenumber {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
 .prev,
 .next {
@@ -188,11 +250,11 @@ a {
 }
 
 .mySlides img {
-    width: 100%;
-    height: 200px;
-    border-radius: 5px;
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
 }
-  
+
 .carouselbtn {
   position: absolute;
   top: 70%;
@@ -200,7 +262,7 @@ a {
   padding: 5px;
 }
 
-/* Start of John/Issy */
+//  =================================== Tiles ===================================
 
 .itemTiles {
   float: left;
@@ -208,8 +270,11 @@ a {
   margin-top: 6px;
 }
 
+//  =================================== Footer ====================================
+
 footer {
   background-color: rgb(90, 90, 90);
+  margin-top: 15px;
 }
 
 .footerContainer {
