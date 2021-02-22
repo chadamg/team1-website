@@ -14,7 +14,15 @@
     
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+    <div class="row">
+    <form class="form-inline my-2 my-lg-0" style="float:right" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
+      <button class="btn btn-outline-success my-2 my-sm-0" style="float:right;" type="submit">Search</button>
+    </form>
+  </div>
+
+  <div class="row">
     <a class="navbar-brand" href="#">App-ly</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -43,11 +51,9 @@
           <a class="nav-link disabled" href="#">Contact</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0" >
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      
     </div>
+  </div>
   </nav>
     <main>
 
@@ -137,7 +143,54 @@
     <footer>
       <div class="container mt-3">
         <div class="row">
-        
+        <div class="col-sm-6">
+          <a href="#"><p>About us</p></a>
+          <a href="#"><p>Customer support</p></a>
+          <a href="#"><p>Terms and conditions</p></a>
+        </div>
+  
+        <div class="col-sm-6">
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-12">
+              <label for="validationCustom01" class="form-label">Email Adress</label>
+              <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label for="validationCustom02" class="form-label">Current Location</label>
+              <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">Device Type</label>
+              <select id="inputState" class="form-control">
+                  <option selected>Choose...</option>
+                  <option value = "1">Android</option>
+                  <option value = "2">Apple </option>
+                  <option value = "3">Desktop</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+          </form>
+        </div>
+  
         </div>
       </div>
     </footer>
