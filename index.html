@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>App-ly</title>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </head>
+
+  <body>
+    <!-- this header contains the topbar(login and search) and the titlenavbar(title and nav bar) -->
+    <header>
+      <div class="header">
+        <a href="#" class="title"><strong>App-ly</strong></a>
+
+        <form action="index.html" class="topbarsearch">
+          <input type="text" placeholder="Search.." />
+          <button type="submit">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <nav class="navbar">
+          <a href="#">Intro</a>
+          <a href="#">Apps</a>
+          <a href="#">Contact</a>
+          <div class="basket-box">
+            <p id="basketNum"></p>
+            <ion-icon name="basket"></ion-icon>
+            <div class="dropdown" id="dropdown">
+              <div id="dropdown-items"></div>
+              <div class="checkout-button">
+                <button id="checkout">Checkout</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+     <!-- this main contains the image carousel and most popular apps(three item tiles) -->
+    <main class="content">
+
+      <br>
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <div class="imButton">
+          <img src="images/phone4.jpg" style="width:100%; height: 400px;">
+          <button class="btn"><a href="https://play.google.com/store/apps/new?hl=en_GB&gl=US">Click here for Latest App Releases!</a></button>
+          </div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="imButton">
+          <img src="images/phone2.jpg" style="width:100%; height: 400px;">
+          <button class="btn"><a href="https://play.google.com/store/apps/new?hl=en_GB&gl=US">Click here for Latest App Releases!</a></button>
+          </div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="imButton">
+          <img src="images/phone3.jpg" style="width:100%; height: 400px;">
+          <button class="btn"><a href="https://play.google.com/store/apps/new?hl=en_GB&gl=US">Click here for Latest App Releases!</a></button>
+        </div>
+        
+      </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+
+      <!--Start of John/Issy -->
+      <div>
+        <!--Paragraph-->
+        <h3>Most popular apps</h3>
+        <p>
+          Below you can find the most downloaded apps this week. Be sure not to
+          be left in the dark ages!
+        </p>
+      </div>
+
+      <div class="middleTiles">
+        <!--Three item tiles -->
+        <!-- <a href="#"> -->
+        <div class="itemTiles">
+          <!--This div should be one of the tiles for the items -->
+
+          <img
+            class="icon"
+            src="https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+            alt="Facebook Image"
+          />
+          <h4>Facebook</h4>
+          <p>Official Facebook app</p>
+          <p>£3.99</p>
+          <button id="addFacebookToBasket">Add to basket</button>
+        </div>
+        <!-- </a> -->
+        <div class="itemTiles">
+          <!--This div should be one of the tiles for the items -->
+          <a href="#">
+            <img
+              class="icon"
+              src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+              alt="Instagram Image"
+            />
+            <h4>Instagram</h4>
+            <p>Official Instagram app</p>
+            <p>£3.99</p>
+            <button id="addInstagramToBasket">Add to basket</button>
+          </a>
+        </div>
+        <div class="itemTiles">
+          <!--This div should be one of the tiles for the items -->
+          <a href="#">
+            <img
+              class="icon"
+              src="https://images.unsplash.com/photo-1611605698323-b1e99cfd37ea?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+              alt="TikTok Image"
+            />
+            <h4>TikTok</h4>
+            <p>Official TikTok app</p>
+            <p>£3.99</p>
+            <button id="addTikTokToBasket">Add to basket</button>
+          </a>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+      <div class="footerContainer">
+        <div class="footerLinks">
+          <!--Left hand side of footer containing links-->
+
+          <a href="#"><p>About us</p></a>
+          <a href="#"><p>Customer support</p></a>
+          <a href="#"><p>Terms and conditions</p></a>
+
+          <!-- Google Web API to display current location on Map -->
+          <div id="map"></div>
+
+          <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+          <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+            async
+          ></script>
+          </div>
+
+        <div class="footerContact">
+          <!--Right hand side for contact form-->
+          <h4 style = "text-align:center; font-weight:bold">Discover the most downloaded apps in your country...</h4>
+          <form>
+            <div class="email-container">
+              <label for="email"> Email </label>
+              <input
+                type="text"
+                id="email"
+                name="user_email"
+                placeholder="Your email..."
+              />
+            </div>
+            <div class="location">
+              <label for="location"> Current location </label>
+              <input
+                type="text"
+                id="location"
+                name="user_location"
+                placeholder="Find your current location using the map to the left..."
+              />
+            </div>
+            <div class="deviceType">
+            <label for="deviceType"> Device type </label>
+            <select id = "deviceTypeDropdown">
+              <option value = "1">Android</option>
+              <option value = "2">Apple </option>
+              <option value = "3">Desktop</option>
+            </select>
+            </div>
+            <label class="switch">
+              <p>Turn on email updates:</p>
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+            <br />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
